@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 function Header(props) {
     return (
@@ -16,9 +17,9 @@ function Header(props) {
           {/* ***** Menu Start ***** */}
           <ul className="nav">
             <li className="scroll-to-section"><NavLink href="#top" to={"/"} className="active navlink scrollto">Home</NavLink></li>
-            <li className="scroll-to-section"><NavLink href="#men" to={"/Men"} className="navlink scrollto">Men's</NavLink></li>
-            <li className="scroll-to-section"><NavLink href="#women" to={"/Women"} className="navlink scrollto">Women's</NavLink></li>
-            <li className="scroll-to-section"><NavLink to={"Kids"} className="navlink scrollto" href="#kids">Kid's</NavLink></li>
+            <li className="scroll-to-section"><NavHashLink href="#men" to={"/Men"} className="navlink scrollto">Men's</NavHashLink></li>
+            <li className="scroll-to-section"><NavHashLink href="#women" to={"/Women"} className="navlink scrollto">Women's</NavHashLink></li>
+            <li className="scroll-to-section"><NavHashLink to={"Kids"} className="navlink scrollto" href="#kids">Kid's</NavHashLink></li>
             <li className="submenu">
               <a href="javascript:;">Pages</a>
               <ul>
@@ -38,6 +39,7 @@ function Header(props) {
               </ul>
             </li>
             <li className="scroll-to-section"><NavLink to={"/Explore"} className="navlink scrollto" href="#explore">Explore</NavLink></li>
+            <li className="scroll-to-section"><NavLink to={"/Auth"} className="navlink scrollto" href="#explore">Login/Signup</NavLink></li>
           </ul>        
           <a className="menu-trigger">
             <span>Menu</span>

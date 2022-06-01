@@ -15,7 +15,6 @@ import Women from './Women/Women';
 function Home(props) {
     return (
         <>
-            <Header/>
             <Banner/>
             <Men />
             <Women/>
@@ -23,7 +22,6 @@ function Home(props) {
             <Explore/>
             <Social/>
             <Subscribe/>
-            <Footer/>
         </>
     );
 }
