@@ -1,4 +1,7 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { NavLink } from 'react-router-dom';
 
 function Women(props) {
   return (
@@ -19,26 +22,31 @@ function Women(props) {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="women-item-carousel">
-              <div className="owl-women-item owl-carousel">
-                <div className="item">
-                  <div className="thumb">
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={3}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              <SwiperSlide>
+                <div className="item ">
+                  <div className="thumb ">
                     <div className="hover-content">
                       <ul>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-eye" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-eye" />
+                        </NavLink>
                         </li>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-star" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-star" />
+                        </NavLink>
                         </li>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-shopping-cart" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-shopping-cart" />
+                        </NavLink>
                         </li>
                       </ul>
                     </div>
@@ -66,24 +74,26 @@ function Women(props) {
                     </ul>
                   </div>
                 </div>
+              </SwiperSlide>
+              <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
                       <ul>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-eye" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-eye" />
+                        </NavLink>
                         </li>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-star" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-star" />
+                        </NavLink>
                         </li>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-shopping-cart" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-shopping-cart" />
+                        </NavLink>
                         </li>
                       </ul>
                     </div>
@@ -111,24 +121,26 @@ function Women(props) {
                     </ul>
                   </div>
                 </div>
+              </SwiperSlide>
+              <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
                       <ul>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-eye" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-eye" />
+                        </NavLink>
                         </li>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-star" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-star" />
+                        </NavLink>
                         </li>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-shopping-cart" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-shopping-cart" />
+                        </NavLink>
                         </li>
                       </ul>
                     </div>
@@ -156,24 +168,26 @@ function Women(props) {
                     </ul>
                   </div>
                 </div>
+              </SwiperSlide>
+              <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
                       <ul>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-eye" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-eye" />
+                        </NavLink>
                         </li>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-star" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-star" />
+                        </NavLink>
                         </li>
                         <li>
-                          <a href="single-product.html">
-                            <i className="fa fa-shopping-cart" />
-                          </a>
+                        <NavLink to={"/SingleProduct"} className="navlink scrollto">
+                          <i className="fa fa-shopping-cart" />
+                        </NavLink>
                         </li>
                       </ul>
                     </div>
@@ -201,8 +215,8 @@ function Women(props) {
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

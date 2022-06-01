@@ -4,6 +4,7 @@ import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import About from './Containers/About/About';
+import Auth from './Containers/Auth/Auth';
 import Banner from './Containers/Banner/Banner';
 import ContactUs from './Containers/ContactUs/ContactUs';
 import Explore from './Containers/Explore/Explore';
@@ -28,13 +29,7 @@ function App() {
       <Route exact path={"/SingleProduct"} component = {SingleProduct} />
       <Route exact path={"/ContactUs"} component = {ContactUs} />
       <Route exact path={"/Products"} component={Products} />
-      <Route exact path={"/Banner"} component={Banner} />
-      <Route exact path={"/Men"} component={Men} />
-      <Route exact path={"/Women"} component={Women} />
-      <Route exact path={"/Kids"} component={Kids} />
-      <Route exact path={"/Explore"} component={Explore} />
-      <Route exact path={"/Social"} component={Social} />
-      <Route exact path={"/Subscribe"} component={Subscribe} />
+      <Route exact path={"/auth"} component={Auth} />
       </Switch>
       <Footer/>
      

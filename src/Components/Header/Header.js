@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 function Header(props) {
     return (
@@ -16,9 +17,9 @@ function Header(props) {
           {/* ***** Menu Start ***** */}
           <ul className="nav">
             <li className="scroll-to-section"><NavLink href="#top" to={"/"} className="active navlink scrollto">Home</NavLink></li>
-            <li className="scroll-to-section"><NavLink href="#men" to={"/Men"} className="navlink scrollto">Men's</NavLink></li>
-            <li className="scroll-to-section"><NavLink href="#women" to={"/Women"} className="navlink scrollto">Women's</NavLink></li>
-            <li className="scroll-to-section"><NavLink to={"Kids"} className="navlink scrollto" href="#kids">Kid's</NavLink></li>
+            <li className="scroll-to-section"><NavHashLink  to={"/#men"} className="navlink scrollto">Men's</NavHashLink></li>
+            <li className="scroll-to-section"><NavHashLink to={"/#women"} className="navlink scrollto">Women's</NavHashLink></li>
+            <li className="scroll-to-section"><NavHashLink  to={"/#kids"} className="navlink scrollto" href="#kids">Kid's</NavHashLink></li>
             <li className="submenu">
               <a href="javascript:;">Pages</a>
               <ul>
@@ -37,7 +38,8 @@ function Header(props) {
                 <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
               </ul>
             </li>
-            <li className="scroll-to-section"><NavLink to={"/Explore"} className="navlink scrollto" href="#explore">Explore</NavLink></li>
+            <li className="scroll-to-section"><NavHashLink  to={"/#explore"} className="navlink scrollto">Explore</NavHashLink></li>
+            <li className="scroll-to-section"><NavLink to={"/auth"} className="navlink scrollto ">Login/Signup</NavLink></li>
           </ul>        
           <a className="menu-trigger">
             <span>Menu</span>

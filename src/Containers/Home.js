@@ -10,6 +10,7 @@ import Men from './Men/Men';
 import Social from './Social/Social';
 import Subscribe from './Subscribe/Subscribe';
 import Women from './Women/Women';
+import Auth from './Auth/Auth';
 // import About from './About/About';
 
 function Home(props) {
@@ -23,7 +24,8 @@ function Home(props) {
             <Explore/>
             <Social/>
             <Subscribe/>
-            <Footer/>
+            {/* <Auth /> */}
+            {/* <Footer/> */}
         </>
     );
 }
