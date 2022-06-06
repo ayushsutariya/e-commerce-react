@@ -1,32 +1,35 @@
 import React from "react";
-import Header from "../../Components/Header/Header";
-import Banner from "../Banner/Banner";
-import Kids from "../Kids/Kids";
-import Women from "../Women/Women";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function Men(props) {
   return (
     <>
-    <section className="section" id="men">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6">
-            <div className="section-heading">
-              <h2>Men's Latest</h2>
-              <span>
-                Details to details is what makes Hexashop different from the
-                other themes.
-              </span>
+      <section className="section" id="men">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="section-heading">
+                <h2>Men's Latest</h2>
+                <span>
+                  Details to details is what makes Hexashop different from the
+                  other themes.
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="men-item-carousel">
-              <div className="owl-men-item owl-carousel">
-                <div className="item">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <Swiper
+                spaceBetween={50}
+                slidesPerView={3}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+              >
+                <SwiperSlide >
+                <div className="item ">
                   <div className="thumb">
                     <div className="hover-content">
                       <ul>
@@ -71,6 +74,8 @@ function Men(props) {
                     </ul>
                   </div>
                 </div>
+                </SwiperSlide>
+                <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
@@ -116,6 +121,8 @@ function Men(props) {
                     </ul>
                   </div>
                 </div>
+                </SwiperSlide>
+                <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
@@ -161,6 +168,8 @@ function Men(props) {
                     </ul>
                   </div>
                 </div>
+                </SwiperSlide>
+                <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
@@ -206,12 +215,12 @@ function Men(props) {
                     </ul>
                   </div>
                 </div>
-              </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     </>
   );

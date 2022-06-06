@@ -1,4 +1,6 @@
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function Women(props) {
   return (
@@ -19,8 +21,13 @@ function Women(props) {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="women-item-carousel">
-              <div className="owl-women-item owl-carousel">
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={3}
+              onSlideChange={() => console.log('slide change')}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
@@ -66,6 +73,8 @@ function Women(props) {
                     </ul>
                   </div>
                 </div>
+              </SwiperSlide>
+              <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
@@ -111,6 +120,8 @@ function Women(props) {
                     </ul>
                   </div>
                 </div>
+                </SwiperSlide>
+                <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
@@ -156,6 +167,8 @@ function Women(props) {
                     </ul>
                   </div>
                 </div>
+                </SwiperSlide>
+                <SwiperSlide>
                 <div className="item">
                   <div className="thumb">
                     <div className="hover-content">
@@ -201,8 +214,8 @@ function Women(props) {
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

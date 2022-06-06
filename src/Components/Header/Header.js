@@ -17,9 +17,9 @@ function Header(props) {
           {/* ***** Menu Start ***** */}
           <ul className="nav">
             <li className="scroll-to-section"><NavLink href="#top" to={"/"} className="active navlink scrollto">Home</NavLink></li>
-            <li className="scroll-to-section"><NavHashLink href="#men" to={"/Men"} className="navlink scrollto">Men's</NavHashLink></li>
-            <li className="scroll-to-section"><NavHashLink href="#women" to={"/Women"} className="navlink scrollto">Women's</NavHashLink></li>
-            <li className="scroll-to-section"><NavHashLink to={"Kids"} className="navlink scrollto" href="#kids">Kid's</NavHashLink></li>
+            <li className="scroll-to-section"><NavHashLink to={"/#men"} className="navlink scrollto">Men's</NavHashLink></li>
+            <li className="scroll-to-section"><NavHashLink to={"/#women"} className="navlink scrollto">Women's</NavHashLink></li>
+            <li className="scroll-to-section"><NavHashLink to={"/#kids"} className="navlink scrollto" href="#kids">Kid's</NavHashLink></li>
             <li className="submenu">
               <a href="javascript:;">Pages</a>
               <ul>
@@ -38,7 +38,7 @@ function Header(props) {
                 <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
               </ul>
             </li>
-            <li className="scroll-to-section"><NavLink to={"/Explore"} className="navlink scrollto" href="#explore">Explore</NavLink></li>
+            <li className="scroll-to-section"><NavHashLink to={"/#explore"} className="navlink scrollto" >Explore</NavHashLink></li>
             <li className="scroll-to-section"><NavLink to={"/Auth"} className="navlink scrollto" href="#explore">Login/Signup</NavLink></li>
           </ul>        
           <a className="menu-trigger">
