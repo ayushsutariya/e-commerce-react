@@ -7,6 +7,7 @@ import About from './Containers/About/About';
 import Auth from './Containers/Auth/Auth';
 import Banner from './Containers/Banner/Banner';
 import ContactUs from './Containers/ContactUs/ContactUs';
+import Database from './Containers/Database/Database';
 import Explore from './Containers/Explore/Explore';
 import Home from './Containers/Home';
 import Kids from './Containers/Kids/Kids';
@@ -30,6 +31,7 @@ function App() {
       <Route exact path={"/ContactUs"} component = {ContactUs} />
       <Route exact path={"/Products"} component={Products} />
       <Route exact path={"/auth"} component={Auth} />
+      <Route exact path={"/database"} component={Database} />
       </Switch>
       <Footer/>
      

@@ -39,6 +39,7 @@ function Header(props) {
               </ul>
             </li>
             <li className="scroll-to-section"><NavHashLink  to={"/#explore"} className="navlink scrollto">Explore</NavHashLink></li>
+            <li className="scroll-to-section"><NavLink  to={"/database"} className="navlink scrollto" >Database</NavLink></li>
             <li className="scroll-to-section"><NavLink to={"/auth"} className="navlink scrollto ">Login/Signup</NavLink></li>
           </ul>        
           <a className="menu-trigger">
