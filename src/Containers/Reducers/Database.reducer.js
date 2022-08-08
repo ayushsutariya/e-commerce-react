@@ -18,6 +18,21 @@ export const Database_Reducer = (state = initVal, action) => {
                 error: ''
             }
 
+        case 'ERROR_DATA' : 
+            return{
+                ...state,
+                loading: false,
+                signup_data: [],
+                error: action.payload
+            }    
+
+        case 'LOADING_DATA' : 
+            return{
+                ...state,
+                loading: true,
+                error: ''
+            }    
+
         default:
             return state;
     }
