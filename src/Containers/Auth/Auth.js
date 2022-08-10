@@ -2,11 +2,15 @@ import React, { useEffect, useState } from 'react';
 import '../Auth/Auth.css'
 import * as yup from "yup";
 import { Form, Formik, useFormik } from "formik";
+import {useDispatch, useSelector} from "react-redux"
 
 export default function Auth() {
 
     const [login, setlogin] = useState("Login")
     const [password, setpassword] = useState(false)
+    const dispatch = useDispatch()
+    // const [data, setData] = useState([])
+    // const database_display = useSelector(state => state.Database_Reducer)
 
     const Handle_login = (values) => {
         console.log("hi Login");
@@ -28,8 +32,6 @@ export default function Auth() {
             id:  Math.floor(Math.random() * 1000),
             ...values
         }
-
-        
 
         // let data = JSON.parse(localStorage.getItem("Signup_Data"))
 
@@ -53,7 +55,6 @@ export default function Auth() {
             localStorage.setItem("Password_data", JSON.stringify(data))
         }
     }
-
 
     let Login_validation = {
         email: yup.string().required("Please enter your email: ").email("Please enter a valid email"),
@@ -106,9 +107,19 @@ export default function Auth() {
         }
     });
 
+    // const loadData = () => {
+    //     setData(database_display.signup_data)
+    //     console.log(data);
+    // }
+
 
 
     useEffect(() => {
+
+        // dispatch(Auth);
+
+        // loadData();
+
         const signupButton = document.getElementById('signup-button'),
             loginButton = document.getElementById('login-button'),
             userForms = document.getElementById('user_options-forms')
@@ -217,7 +228,7 @@ export default function Auth() {
                                         )}
                                     </div>
                                     <div className="forms_field">
-                                        <input type="password" placeholder="Password" id='password' name='password' className="forms_field-input" required
+                                        <input type="password" placeholder="Password" id='password' zname='password' className="forms_field-input" required
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
                                             value={formik.values.password} />

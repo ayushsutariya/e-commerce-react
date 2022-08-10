@@ -1,4 +1,4 @@
-import { action } from 'autofocus';
+
 import React from 'react';
 
 const initVal = {

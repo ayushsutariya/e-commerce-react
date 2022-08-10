@@ -1,6 +1,8 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { PersistGate } from 'redux-persist/integration/react';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import About from './Containers/About/About';
@@ -22,20 +24,19 @@ import './logo.svg'
 
 function App() {
   return (
-    <>
-      <Header/>
+    <div>
+      <Header />
       <Switch>
-      <Route exact path={"/"} component={Home} />
-      <Route exact path={"/About"} component={About} />
-      <Route exact path={"/SingleProduct"} component = {SingleProduct} />
-      <Route exact path={"/ContactUs"} component = {ContactUs} />
-      <Route exact path={"/Products"} component={Products} />
-      <Route exact path={"/auth"} component={Auth} />
-      <Route exact path={"/database"} component={Database} />
+        <Route exact path={"/"} component={Home} />
+        <Route exact path={"/About"} component={About} />
+        <Route exact path={"/SingleProduct"} component={SingleProduct} />
+        <Route exact path={"/ContactUs"} component={ContactUs} />
+        <Route exact path={"/Products"} component={Products} />
+        <Route exact path={"/auth"} component={Auth} />
+        <Route exact path={"/database"} component={Database} />
       </Switch>
-      <Footer/>
-     
-    </>
+      <Footer />
+    </div>
   );
 }
 

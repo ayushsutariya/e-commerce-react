@@ -1,9 +1,12 @@
 import axios from "axios";
+import { BASE_URL } from "../../BaseUrl";
 
 const instance = axios.create({
-    baseURL: 'http://localhost:3004/userdata',
-    timeout: 1000,
-    headers: {'X-Custom-Header': 'foobar'}
+    baseURL: BASE_URL,
+    timeout: 2000,
+    headers: {
+      'Content-Type': 'application/json',
+    }
   });
 
   export const axiosRequest = (config) => {
@@ -16,3 +19,11 @@ const instance = axios.create({
       method : 'GET'
     })
   }
+
+  // export const postRequest = (path, data) => {
+  //   return axiosRequest ({
+  //     url : path,
+  //     method : 'POST',
+  //     data: data
+  //   })
+  // }

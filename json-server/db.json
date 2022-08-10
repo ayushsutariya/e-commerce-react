@@ -1,11 +1,27 @@
-{"userdata" : [
-  { "id": 1, "title": "json-server", "author": "typicode" }
-],
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+{
+  "userdata": [
+    {
+      "Id": 1,
+      "Name": "json-server",
+      "Email_Id": "typicode",
+      "Password" : "Something"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}

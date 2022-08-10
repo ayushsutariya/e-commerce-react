@@ -1,14 +1,12 @@
 import { useDispatch } from "react-redux"
 import { Get_Database } from "../Api/DataBase.api";
 
-export const DatabaseData = (dispatch) => {
-
+export const DatabaseData =  () =>(dispatch) => {
+    // console.log(data);
     try {
         Get_Database()
-
             .then((data) => {
-                console.log(data.data);
-                dispatch({ type: 'GET_SIGNUP_DATA', payload: data.data  })
+                dispatch({ type: 'GET_SIGNUP_DATA', payload: data.data})
             })
 
             .catch(error => dispatch(error_medicines(error.message)));
