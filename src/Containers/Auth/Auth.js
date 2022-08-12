@@ -3,14 +3,15 @@ import '../Auth/Auth.css'
 import * as yup from "yup";
 import { Form, Formik, useFormik } from "formik";
 import {useDispatch, useSelector} from "react-redux"
+import { PostDatabaseData , DatabaseData } from '../Action/Database.Action';
 
 export default function Auth() {
 
     const [login, setlogin] = useState("Login")
     const [password, setpassword] = useState(false)
     const dispatch = useDispatch()
-    // const [data, setData] = useState([])
-    // const database_display = useSelector(state => state.Database_Reducer)
+    const [data, setData] = useState([])
+    const database_display = useSelector(state => state.Database_Reducer)
 
     const Handle_login = (values) => {
         console.log("hi Login");
@@ -33,6 +34,7 @@ export default function Auth() {
             ...values
         }
 
+        dispatch(PostDatabaseData(data))
         // let data = JSON.parse(localStorage.getItem("Signup_Data"))
 
         // if (data === null) {
@@ -41,7 +43,17 @@ export default function Auth() {
         //     data.push(values)
         //     localStorage.setItem("Signup_Data", JSON.stringify(data))
         // }
+
     }
+
+     const loadData  = () => {
+        setData(database_display.DatabaseData)
+    }
+
+    useEffect(() => {
+     loadData()
+    }, [])
+    
 
     const Handle_Password = (values) => {
         console.log("hi Password");
@@ -248,7 +260,7 @@ export default function Auth() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
 
     )
 }

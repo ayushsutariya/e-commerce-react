@@ -3,18 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/avatar": "^2.0.7",
+    "@coreui/coreui": "^4.2.0",
+    "@coreui/react": "^4.3.1",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.0",
+    "@mui/styled-engine-sc": "^5.10.0",
     "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "autofocus": "^1.2.3",
     "axios": "^0.27.2",
-    "bootstrap": "^5.1.3",
+    "bootstrap": "^5.2.0",
+    "faker": "^6.6.6",
     "form": "^0.2.4",
     "formik": "^2.2.9",
+    "primeicons": "^5.0.0",
+    "primereact": "^8.3.0",
     "react": "^18.1.0",
+    "react-avatar": "^5.0.3",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
+    "react-nice-avatar": "^1.2.4",
     "react-redux": "^8.0.2",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.4.3",
@@ -25,6 +37,7 @@
     "redux-thunk": "^2.4.1",
     "sass": "^1.52.1",
     "slick-slider": "^1.8.2",
+    "styled-components": "^5.3.5",
     "swiper": "^8.1.4",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
@@ -52,5 +65,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.4.0"
   }
 }

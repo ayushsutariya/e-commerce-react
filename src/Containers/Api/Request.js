@@ -20,10 +20,17 @@ const instance = axios.create({
     })
   }
 
-  // export const postRequest = (path, data) => {
-  //   return axiosRequest ({
-  //     url : path,
-  //     method : 'POST',
-  //     data: data
-  //   })
-  // }
+  export const postRequest = (path, data) => {
+    return axiosRequest ({
+      url : path,
+      method : 'POST',
+      data: JSON.stringify(data)
+    })
+  }
+
+  export const deleteRequest = (path, id) => {
+    return axiosRequest ({
+      url : path ,
+      method : 'DELETE',
+    })
+  }
