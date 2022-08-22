@@ -34,6 +34,20 @@ export const Database_Reducer = (state = initVal, action) => {
                 error: ''
             }
 
+        case 'EDIT_SIGNUP_DATA' : 
+            return{
+                ...state,
+                loading: false,
+                signup_data: state.signup_data.map((d) => {
+                    if(d.id === action.payload.id) {
+                        return action.payload
+                    } else {
+                        return d
+                    }
+                }),
+                error: ''
+            }    
+
         case 'ERROR_DATA':
             return {
                 ...state,

@@ -32,12 +32,13 @@ function Database(props) {
     useEffect(
         () => {
             dispatch(DatabaseData())
+            // dispatch(DeleteDatabaseData())
         },
         []);
     const database_display = useSelector(state => state.Database_Reducer)
     console.log(database_display.signup_data);
 
-    const HandleDelete = () => () => {
+    const HandleDelete = () => {
         dispatch(DeleteDatabaseData(did));
         setdid();
     }
@@ -57,8 +58,8 @@ function Database(props) {
                 >
                     <DialogTitle>{"Are you Sure Want to Delete?"}</DialogTitle>
                     <DialogActions>
-                        <Button onClick={handleClose}>Disagree</Button>
-                        <Button onClick={HandleDelete()}>Agree</Button>
+                        <Button onClick={() => handleClose()}>Disagree</Button>
+                        <Button onClick={() => HandleDelete()}>Agree</Button>
                     </DialogActions>
                 </Dialog>
             </div>
@@ -84,7 +85,7 @@ function Database(props) {
                                     <td>{i.email}</td>
                                     <td>{i.password}</td>
                                     <td>
-                                        <button className="view">Edit</button>
+                                        <button className="view" >Edit</button>
                                         <button className="delete" onClick={() => handleClickOpen(i.id)}>Delete</button>
                                     </td>
                                 </tr>

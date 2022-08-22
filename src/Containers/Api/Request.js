@@ -3,7 +3,7 @@ import { BASE_URL } from "../../BaseUrl";
 
 const instance = axios.create({
     baseURL: BASE_URL,
-    timeout: 2000,
+    timeout: 3000,
     headers: {
       'Content-Type': 'application/json',
     }
@@ -28,9 +28,16 @@ const instance = axios.create({
     })
   }
 
-  export const deleteRequest = (path, id) => {
+  export const deleteRequest = (path) => {
     return axiosRequest ({
       url : path ,
       method : 'DELETE',
     })
+  }
+
+  export const editRequest = (path, data) => {
+    return axiosRequest ({
+      url : path,
+      method : 'EDIT',
+    }) 
   }

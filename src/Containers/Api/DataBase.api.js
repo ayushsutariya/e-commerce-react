@@ -1,4 +1,4 @@
-import { deleteRequest, getRequest, postRequest } from "./Request"
+import { deleteRequest, editRequest, getRequest, postRequest } from "./Request"
 
 export const Get_Database = () => {
     return getRequest("userdata")
@@ -10,4 +10,8 @@ export const Post_Database = (data) => {
 
 export const Delete_Database = (id) => {
     return deleteRequest("userdata/"+id)
+}
+
+export const Edit_Database = (data) => {
+    return editRequest("medicine" , data)
 }
