@@ -14,26 +14,15 @@ import rootSaga from './Containers/Common/rootSaga';
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
-const middleware = [
-  sagaMiddleware,
-  thunk
-]
-
-const store = createStore(all_Reducers, applyMiddleware(...middleware));
-
-const sagaMiddleware = createSagaMiddleware()
-
+// const store = createStore(all_Reducers, applyMiddleware(...middleware));
 root.render(
-  <Provider store={store}>
       <BrowserRouter>
         <React.StrictMode>
           <App />
         </React.StrictMode> 
       </BrowserRouter>
-  </Provider>
 );
 
-sagaMiddleware.run(rootSaga)
 
 // return { store, persistor }
 // If you want to start measuring performance in your app, pass a function

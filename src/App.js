@@ -8,6 +8,7 @@ import Header from './Components/Header/Header';
 import About from './Containers/About/About';
 import Auth from './Containers/Auth/Auth';
 import Banner from './Containers/Banner/Banner';
+import { store } from './Containers/Common/Store';
 import ContactUs from './Containers/ContactUs/ContactUs';
 import Database from './Containers/Database/Database';
 import Explore from './Containers/Explore/Explore';
@@ -24,7 +25,7 @@ import './logo.svg'
 
 function App() {
   return (
-    <div>
+    <Provider store={store}>
       <Header />
       <Switch>
         <Route exact path={"/"} component={Home} />
@@ -36,7 +37,7 @@ function App() {
         <Route exact path={"/database"} component={Database} />
       </Switch>
       <Footer />
-    </div>
+    </Provider>
   );
 }
 

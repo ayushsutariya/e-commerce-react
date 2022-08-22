@@ -1,4 +1,4 @@
 export const SignupAction = (data) => (dispatch) => {
-    dispatch({type: "Signup_USER" , payload: data})
+    dispatch({type: "SIGNUP_USER" , payload: data})
 }
 

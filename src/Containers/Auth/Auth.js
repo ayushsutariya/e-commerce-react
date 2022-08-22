@@ -4,6 +4,7 @@ import * as yup from "yup";
 import { Form, Formik, useFormik } from "formik";
 import {useDispatch, useSelector} from "react-redux"
 import { PostDatabaseData , DatabaseData } from '../Action/Database.Action';
+import { SignupAction } from '../Action/Auth.action';
 
 export default function Auth() {
 
@@ -35,6 +36,7 @@ export default function Auth() {
         }
 
         dispatch(PostDatabaseData(data))
+        dispatch(SignupAction(values))
         // let data = JSON.parse(localStorage.getItem("Signup_Data"))
 
         // if (data === null) {
