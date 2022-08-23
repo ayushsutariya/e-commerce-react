@@ -1,6 +1,9 @@
 import { useDispatch } from "react-redux"
 import { Delete_Database, Edit_Database, Get_Database, Post_Database } from "../Api/DataBase.api";
 
+import { collection, addDoc } from "firebase/firestore"; 
+import { db } from "../../Firebase/Firebase";
+
 export const DatabaseData = () => (dispatch) => {
     // console.log(data);
     try {
@@ -16,7 +19,7 @@ export const DatabaseData = () => (dispatch) => {
     }
 }
 
-export const PostDatabaseData = (data) => (dispatch) => {
+export const PostDatabaseData = (data) => async(dispatch) => {
     try {
         Post_Database(data)
             .then((data) => {
@@ -28,6 +31,14 @@ export const PostDatabaseData = (data) => (dispatch) => {
         dispatch(error_medicines(error.message))
         console.log(error);
     }
+
+
+try {
+  const docRef = await addDoc(collection(db, "userdata"), data);
+  console.log("Document written with ID: ", docRef.id);
+} catch (e) {
+  console.error("Error adding document: ", e);
+}
 }
 
 export const DeleteDatabaseData = (id) => (dispatch) => {

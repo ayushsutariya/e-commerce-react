@@ -9,7 +9,9 @@ import Slide from '@mui/material/Slide';
 import { useDispatch, useSelector } from 'react-redux';
 import { DatabaseData, DeleteDatabaseData } from '../Action/Database.Action';
 import '../Database/Database.css'
-
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
 function Database(props) {
     const [open, setOpen] = React.useState(false);
     const [did, setdid] = useState();
@@ -24,9 +26,7 @@ function Database(props) {
         setOpen(false);
       };
 
-      const Transition = React.forwardRef(function Transition(props, ref) {
-        return <Slide direction="up" ref={ref} {...props} />;
-      });
+      
 
     const dispatch = useDispatch();
     useEffect(
@@ -41,6 +41,7 @@ function Database(props) {
     const HandleDelete = () => {
         dispatch(DeleteDatabaseData(did));
         setdid();
+        setOpen(false);
     }
 
     return (
